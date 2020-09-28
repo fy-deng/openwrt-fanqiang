@@ -16,6 +16,12 @@
 - 其他流量通过shadowsocks服务端转发
 - [路由器屏蔽国内外的广告](ebook/03.6.md)
 - [利用 Bash 一键切换翻墙模式](ebook/03.11.md)
+- [Windows 电脑 Shadowsocks + Simple-obfs 科学上网教程](ebook/04.9.md)
+- [Android 安卓手机安装 shadowsocks 科学上网教程](ebook/03.10.md)
+- [预编译翻墙固件的设置和使用 (WNDR4300为例)](ebook/wndr4300/6.login-setup-netgear-wndr4300-fanqiang.md)
+- [Digital Ocean 创建VPS教程](ebook/03.9.md)
+- [有哪些翻墙软件](ebook/09.1.md)
+- [翻墙失败的原因分析](ebook/03.7.md)
 
 知识若不分享，实在没有意义
 -----------------------
@@ -24,7 +30,7 @@
 
 查资料发现，著名的开源路由器固件OpenWrt支持家里的路由器 TP-Link WR2543N V1 ，于是就给路由器安装了OpenWrt并设置为自动智能翻墙
 
-再也没有打不开的网站了，自由的感觉真好:　youtube, twitter, facebook, google...
+再也没有打不开的网站了，自由的感觉真好:　YouTube, twitter, FaceBook, Google...
 
 什么是圣人，**圣人就是得到和付出比较均衡的人**：
 
@@ -65,28 +71,12 @@ Linux下如何编译OpenWrt shadowsocks自动翻墙固件
     root login password:        fanqiang
     WIFI password:              icanfly9876
 
-如何使用预编译翻墙固件：
----------------------
-
-- shadowsocks 服务端保持默认值（除了server IP)
-- 路由器刷OpenWrt shadowsocks翻墙固件
-- 登录路由器修改server IP：
-
-      # Modify 1.0.9.8 to your server IP address
-      vi /etc/shadowsocks-libev/config.json
-      # Modify 1.0.9.8 to your server IP address
-      vi /usr/bin/ss-firewall-asia
-      /etc/init.d/shadowsocks restart
-
-- 以上修改测试通过后，建议再修改 shadowsocks password, 路由器root password
-- 少数时候需要重启路由器才能使修改生效
-
 关于 IPv6
 ---------
 
 默认翻墙固件不支持IPv6
 
-有的软件如 Dropbox 桌面客户端默认连接到服务端 IPv6 地址，`ping dropbox.com` 出来的是IPv6 地址， 可能导致客户端连接服务器失败，浏览器导航到 www.Dropbox.com 连接被重置
+有的软件如 Dropbox 桌面客户端默认连接到服务端 IPv6 地址，`ping dropbox.com` 出来的是IPv6 地址， 可能导致客户端连接服务器失败，浏览器导航到 www.Dropbox.com 连接被重置 (可用 [Mega](https://mega.nz/aff=-iGudwBMHKw) 替代 Dropbox)
 
 解决办法：网络连接的属性，不要勾选 `Internet Protocol Version 6 (TCP/IPv6)`
 
@@ -112,11 +102,12 @@ Linux下如何编译OpenWrt shadowsocks自动翻墙固件
     [https://software-download.name/2014/openwrt-ar71xx-generic-tl-wr2543-v1-squashfs-sysupgrade-bin-with-shadowsocks/](https://software-download.name/2014/openwrt-ar71xx-generic-tl-wr2543-v1-squashfs-sysupgrade-bin-with-shadowsocks/)
 
 
-在线阅读史上最详细的科学上网教程
+在线阅读史上最详细的[科学上网教程](https://fanqiang.software-download.name)
 ---------------------------
 
-- [https://fanqiang.software-download.name](https://fanqiang.software-download.name)
+- <https://github.com/softwaredownload/openwrt-fanqiang/blob/master/SUMMARY.md>
+- <https://fanqiang.software-download.name>
 
 ----
 
-Thanks to [Best Software Download](https://software-download.name) for hosting the firmware
+Thanks to [Video Converter Software Download](https://software-download.name) for hosting the firmware
